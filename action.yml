@@ -9,6 +9,9 @@ inputs:
     description: 'execute timestamp.js'
     required: true
     default: new Date().toISOString()
+  env:
+    description: 'custom env'
+    required: false
 runs:
   using: 'node16'
   main: 'main.js'
