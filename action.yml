@@ -4,6 +4,10 @@ inputs:
   helloWord:
     description: 'execute helloWord.js'
     required: true
+    default: 'Hello World'
+  timestamp:
+    description: 'The current timestamp'
+    required: true
 runs:
   using: 'node12'
   main: 'helloWord.js'
