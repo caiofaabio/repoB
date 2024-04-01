@@ -7,6 +7,10 @@ on:
         description: 'The input to the hello world script'
         required: true
         default: 'Hello World'
+      timestamp:
+        description: 'The current timestamp'
+        required: true
+
   push:
     branches:
       - main
