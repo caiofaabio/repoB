@@ -8,6 +8,7 @@ inputs:
   timestamp:
     description: 'execute timestamp.js'
     required: true
+    default: new Date().toISOString()
 runs:
   using: 'node16'
   main: 'main.js'
