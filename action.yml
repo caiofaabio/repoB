@@ -1,4 +1,4 @@
-name: 'Hello World Action'
+name: 'Hello World CaioFabio'
 description: 'Executa o script helloWord.js'
 inputs:
   helloWord:
