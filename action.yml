@@ -6,9 +6,8 @@ inputs:
     required: true
     default: 'Hello World'
   timestamp:
-    description: 'The current timestamp'
+    description: 'execute timestamp.js'
     required: true
 runs:
   using: 'node16'
-  main: 'helloWord.js'
-  main: 'timestamp.js'
+  main: 'main.js'
