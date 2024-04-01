@@ -34,6 +34,6 @@ jobs:
         run: node timestamp.js
 
       - name: Custom Env
-        run: node env.js
-
-      
+        run: |
+          echo "NOME: $NOME"
+          echo "SOBRENOME: $SOBRENOME"
