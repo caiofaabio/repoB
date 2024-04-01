@@ -1,0 +1,11 @@
+{
+  "name": "@caiofaabio/repoB",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/caiofaabio/repoB.git",
+  "author": "Caio Fabio <109986771+caiofaabio@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
