@@ -1,0 +1,18 @@
+name: Hello World
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Hello World
+        run: node helloWorld.js
+
+      
