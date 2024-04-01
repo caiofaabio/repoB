@@ -1,0 +1,9 @@
+name: 'Hello World Action'
+description: 'Executa o script helloWord.js'
+inputs:
+  helloWord:
+    description: 'execute helloWord.js'
+    required: true
+runs:
+  using: 'node12'
+  main: 'helloWord.js'
