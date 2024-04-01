@@ -7,7 +7,7 @@ inputs:
     default: 'Hello World'
   timestamp:
     description: 'The current timestamp'
-    required: true
+    required: false
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'helloWord.js'

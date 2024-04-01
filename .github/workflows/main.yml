@@ -24,5 +24,8 @@ jobs:
 
       - name: Hello World
         run: node helloWord.js
+      
+      - name: new Date
+        run: node timestamp.js
 
       
