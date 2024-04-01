@@ -23,6 +23,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NOME: ${{ secrets.NOME }}
+      SOBRENOME: ${{ secrets.SOBRENOME }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
