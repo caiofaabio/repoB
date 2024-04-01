@@ -1,6 +1,12 @@
 name: Hello World
 
 on:
+  workflow_dispatch:
+    inputs:
+      helloWord:
+        description: 'The input to the hello world script'
+        required: true
+        default: 'Hello World'
   push:
     branches:
       - main
