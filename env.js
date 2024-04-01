@@ -1,1 +1,4 @@
-console.log(`ENV: ${process.env.NOME}, %{process.env.SOBRENOME}`)
+require('dotenv').config();
+
+
+console.log(`ENV - NOME: ${process.env.NOME}, SOBRENOME: ${process.env.SOBRENOME}`)
