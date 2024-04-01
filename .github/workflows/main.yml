@@ -37,4 +37,4 @@ jobs:
         run: node timestamp.js
 
       - name: Custom Env
-        run: run env.js
+        run: node env.js
