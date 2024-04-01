@@ -1,0 +1,1 @@
+console.log(`ENV: ${process.env.NOME}, %{process.env.SOBRENOME}`)
