@@ -14,10 +14,10 @@ jobs:
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
       - name: Repository Dispatch
-        uses: caiofaabio/repoA@main
+        uses: peter-evans/repository-dispatch@v3
+        # uses: caiofaabio/repoA@main
         with:
           repository: 'caiofaabio/repoB'
           token: '${{ env.TOKEN }}'
           event-type: 'my-event'
-          client-payload: '{}'
-          # client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
