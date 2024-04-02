@@ -13,10 +13,21 @@ jobs:
       SOBRENOME: ${{ secrets.SOBRENOME }}
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
+      # - name: Repository Dispatch
+      #   uses: caiofaabio/repoA@main
+      #   with:
+      #     repository: 'caiofaabio/repoB'
+      #     token: '${{ env.TOKEN }}'
+      #     event-type: 'workflow_dispatch'
+      #     client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
         with:
           repository: 'caiofaabio/repoB'
-          token: '${{ env.TOKEN }}'
+          token: ${{ secrets.TOKEN }}
           event-type: 'workflow_dispatch'
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
+        env:
+          NOME: ${{ secrets.NOME }}
+          SOBRENOME: ${{ secrets.SOBRENOME }}
+          REF: ${{ github.ref }}
+          SHA: ${{ github.sha }}
