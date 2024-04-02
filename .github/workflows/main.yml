@@ -22,4 +22,4 @@ jobs:
           token: '${{ env.TOKEN }}'
           repository: 'caiofaabio/repoB'
           event-type: 'workflow_dispatch'
-          client-payload: '{"NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
+          client-payload: {"NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}
