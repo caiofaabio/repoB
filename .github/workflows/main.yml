@@ -11,6 +11,7 @@ jobs:
     env:
       NOME: ${{ secrets.NOME }}
       SOBRENOME: ${{ secrets.SOBRENOME }}
+      TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -18,7 +19,7 @@ jobs:
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
         with:
-          env-params: '{"NOME": "CAIO", "SOBRENOME": "FABIO"}'
+          token: '${{ TOKEN }}'
           repository: 'caiofaabio/repoB'
-          token: '${{ secrets.TOKEN_TEST_CLASSIC }}'
           event-type: 'workflow_dispatch'
+          env-params: '{"NOME": "${{ NOME }}", "SOBRENOME": "${{ SOBRENOME }}"}'
