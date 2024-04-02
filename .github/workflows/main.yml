@@ -16,7 +16,6 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Repository Dispatch
-        uses: caiofaabio/repoA
+        uses: caiofaabio/repoA@main
         with:
-          token: ${{ secrets.TOKEN_TEST_CLASSIC }}
           env-params: '{"NOME": "CAIO", "SOBRENOME": "FABIO"}'
