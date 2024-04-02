@@ -18,4 +18,5 @@ jobs:
       - name: Repository Dispatch
         uses: caiofaabio/repoA
         with:
+          token: ${{ secrets.TOKEN_TEST_CLASSIC }}
           env-params: '{"NOME": "CAIO", "SOBRENOME": "FABIO"}'
