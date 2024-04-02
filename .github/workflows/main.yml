@@ -18,5 +18,5 @@ jobs:
         with:
           repository: 'caiofaabio/repoB'
           token: '${{ env.TOKEN }}'
-          event-type: 'workflow_dispatch'
+          event-type: 'my-event'
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
