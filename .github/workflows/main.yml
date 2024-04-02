@@ -16,7 +16,7 @@ jobs:
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
         with:
-          token: '${{ env.TOKEN }}'
           repository: 'caiofaabio/repoB'
+          token: '${{ env.TOKEN }}'
           event-type: 'workflow_dispatch'
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}, "NOME": "${{ env.NOME }}", "SOBRENOME": "${{ env.SOBRENOME }}"}'
