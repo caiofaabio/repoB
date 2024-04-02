@@ -21,3 +21,4 @@ jobs:
           env-params: '{"NOME": "CAIO", "SOBRENOME": "FABIO"}'
           repository: 'caiofaabio/repoB'
           token: ${{ secrets.TOKEN_TEST_CLASSIC }}
+          event-type: 'workflow_dispatch'
