@@ -19,3 +19,5 @@ jobs:
         uses: caiofaabio/repoA@main
         with:
           env-params: '{"NOME": "CAIO", "SOBRENOME": "FABIO"}'
+          repository: 'caiofaabio/repoB'
+          token: ${{ secrets.TOKEN_TEST_CLASSIC }}
