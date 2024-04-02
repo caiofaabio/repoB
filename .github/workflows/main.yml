@@ -17,5 +17,5 @@ jobs:
         
       - name: Repository Dispatch
         uses: caiofaabio/repoA
-          with:
-            env-params: '{"NOME": "${{ github.NOME }}", "SOBRENOME": "${{ github.SOBRENOME }}"}'
+        with:
+          env-params: '{"NOME": "${{ github.NOME }}", "SOBRENOME": "${{ github.SOBRENOME }}"}'
