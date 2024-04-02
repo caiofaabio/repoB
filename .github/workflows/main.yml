@@ -11,7 +11,7 @@ jobs:
     env:
       NOME: ${{ secrets.NOME }}
       SOBRENOME: ${{ secrets.SOBRENOME }}
-      TOKEN: ${{ github.TOKEN_TEST_CLASSIC }}
+      TOKEN: ${{ github.token }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
