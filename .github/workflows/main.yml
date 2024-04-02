@@ -6,9 +6,15 @@ on:
       - main
 
 jobs:
-  call:
+  build:
     runs-on: ubuntu-latest
+    env:
+      NOME: ${{ secrets.NOME }}
+      SOBRENOME: ${{ secrets.SOBRENOME }}
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        
       - name: Repository Dispatch
         uses: caiofaabio/repoA
           with:
