@@ -13,8 +13,8 @@ jobs:
       SOBRENOME: ${{ secrets.SOBRENOME }}
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+      # - name: Checkout Repo
+      #   uses: actions/checkout@v2
         
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
