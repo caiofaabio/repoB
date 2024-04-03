@@ -23,5 +23,5 @@ jobs:
           repository: 'caiofaabio/repoB'
           token: '${{ env.TOKEN }}'
           event-type: 'my-event'
-          client-payload: {}
+          client-payload: '{}'
       
