@@ -13,6 +13,9 @@ jobs:
       SOBRENOME: ${{ secrets.SOBRENOME }}
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
       - name: Repository Dispatch
         # uses: peter-evans/repository-dispatch@v3
         uses: caiofaabio/repoA@main
@@ -20,11 +23,5 @@ jobs:
           repository: 'caiofaabio/repoB'
           token: '${{ env.TOKEN }}'
           event-type: 'my-event'
-          client-payload: |-
-            {
-              "ref": "${{ github.ref }}",
-              "sha": "${{ github.sha }}",
-              "NOME": "${{ env.NOME }}",
-              "SOBRENOME": "${{ env.SOBRENOME }}"
-            }
+          client-payload: {}
       
