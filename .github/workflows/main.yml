@@ -12,7 +12,7 @@ jobs:
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Repository Dispatch
         # uses: peter-evans/repository-dispatch@v3
