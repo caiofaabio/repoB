@@ -1,2 +1,0 @@
-# repoB
-primeiro action

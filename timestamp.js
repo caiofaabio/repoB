@@ -1,1 +1,0 @@
-console.log('Hello World! In the current time: ' + new Date())
