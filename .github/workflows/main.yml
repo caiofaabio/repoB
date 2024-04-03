@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      TOKEN: '${{ secrets.TOKEN_TEST_CLASSIC }}'
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -18,5 +16,5 @@ jobs:
         # uses: peter-evans/repository-dispatch@v3
         uses: caiofaabio/repoA@main
         with:
-          token: ${{ env.TOKEN }}
+          token: '${{  secrets.TOKEN_TEST_CLASSIC }}'
       
