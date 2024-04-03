@@ -12,6 +12,7 @@ jobs:
       NOME: ${{ secrets.NOME }}
       SOBRENOME: ${{ secrets.SOBRENOME }}
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
+      TESTE: "teste"
     steps:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
@@ -26,5 +27,8 @@ jobs:
               "sha": "${{ github.sha }}",
               "NOME": "${{ env.NOME }}",
               "SOBRENOME": "${{ env.SOBRENOME }},
-              "TESTE": ${{ process.env.TESTE }}
+              "TESTE": ${{ env.TESTE }}
             }
+      
+      - name: Print env variable
+        run: echo ${{ secrets.TESTE }}
