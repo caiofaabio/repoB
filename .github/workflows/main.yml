@@ -9,8 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NOME: ${{ secrets.NOME }}
-      SOBRENOME: ${{ secrets.SOBRENOME }}
       TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
     steps:
       - name: Checkout Repo
