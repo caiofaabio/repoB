@@ -25,6 +25,6 @@ jobs:
               "ref": "${{ github.ref }}",
               "sha": "${{ github.sha }}",
               "NOME": "${{ env.NOME }}",
-              "SOBRENOME": "${{ env.SOBRENOME }}
+              "SOBRENOME": "${{ env.SOBRENOME }}"
             }
       
