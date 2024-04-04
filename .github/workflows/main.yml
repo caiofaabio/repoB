@@ -15,6 +15,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
+      - name: "@actions/core"
+        run: yarn add @actions/core
+
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
         with:
