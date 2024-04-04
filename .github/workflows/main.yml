@@ -23,6 +23,3 @@ jobs:
               "NOME": "${{ env.NOME }}",
               "SOBRENOME": "${{ env.SOBRENOME }}
             }
-
-      - name: "Install dependencies"
-        run: yarn add @actions/core
