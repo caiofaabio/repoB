@@ -8,10 +8,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NOME: ${{ secrets.NOME }}
+      SOBRENOME: ${{ secrets.SOBRENOME }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
-      
+        with:
+          client-payload: |-
+            {
+              "NOME": "${{ env.NOME }}",
+              "SOBRENOME": "${{ env.SOBRENOME }}
+            }
