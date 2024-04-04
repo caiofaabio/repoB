@@ -13,10 +13,13 @@ jobs:
       SOBRENOME: ${{ secrets.SOBRENOME }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: "@actions/core"
-        run: yarn add @actions/core
+      - name: Install dependencies
+        run: yarn install --production --ignore-scripts --prefer-offline
+
+      - name: Build
+        run: yarn build
 
       - name: Repository Dispatch
         uses: caiofaabio/repoA@main
