@@ -13,8 +13,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Repository Dispatch
-        # uses: peter-evans/repository-dispatch@v3
         uses: caiofaabio/repoA@main
-        with:
-          token: "${{  secrets.TOKEN_TEST_CLASSIC }}"
       
